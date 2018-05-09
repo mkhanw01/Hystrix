@@ -5,11 +5,11 @@
 
 	<groupId>com.coviam</groupId>
 	<artifactId>hystrix</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>hystrix</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Demo project for Spring Boot with Hystrix</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -23,6 +23,11 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Finchley.RC1</spring-cloud.version>
+		<springfox-version>2.7.0</springfox-version>
+		<maven.project.groupId>${project.groupId}</maven.project.groupId>
+		<maven.project.artifactId>${project.artifactId}</maven.project.artifactId>
+		<maven.project.version>${project.version}</maven.project.version>
+		<maven.build.time>${maven.build.timestamp}</maven.build.time>
 	</properties>
 
 	<dependencies>
@@ -70,9 +75,23 @@
 		</dependency>
 
 		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${springfox-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>${springfox-version}</version>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
 		</dependency>
 	</dependencies>
 
